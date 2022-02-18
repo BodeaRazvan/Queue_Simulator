@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.CubicCurve?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<TitledPane fx:id="UserInterface" alignment="CENTER" animated="false" collapsible="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" text="Queue Manager" textAlignment="CENTER" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.QueueManager.controller.Controller">
+  <content>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+         <children>
+            <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of Clients">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="fieldNoOfClients" layoutX="14.0" layoutY="31.0" prefHeight="30.0" prefWidth="226.0" style="-fx-border-color: #000000;" />
+            <Text layoutX="14.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of Queues">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="fieldNoOfQueues" layoutX="14.0" layoutY="77.0" prefHeight="30.0" prefWidth="226.0" style="-fx-border-color: #000000;" />
+            <Text layoutX="14.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Simulation interval">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="fieldSimulationInterval" layoutX="14.0" layoutY="124.0" prefHeight="30.0" prefWidth="226.0" promptText="the duration of the test" style="-fx-border-color: #000000;" />
+            <Text layoutX="14.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Minimum Arrival Time">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="fieldMinArrivalTime" layoutX="14.0" layoutY="170.0" prefHeight="30.0" prefWidth="226.0" promptText="clients start arriving" style="-fx-border-color: #000000;" />
+            <Text layoutX="14.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Maximum Arrival Time">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="fieldMaxArrivalTime" layoutX="14.0" layoutY="216.0" prefHeight="30.0" prefWidth="226.0" promptText="clients stop arriving" style="-fx-border-color: #000000;" />
+            <Text layoutX="15.0" layoutY="262.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Minimum Service Time">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="fieldMinServiceTime" layoutX="14.0" layoutY="268.0" prefHeight="30.0" prefWidth="226.0" style="-fx-border-color: #000000;" />
+            <Text layoutX="14.0" layoutY="311.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Maximum Service Time">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="fieldMaxServiceTime" layoutX="14.0" layoutY="314.0" prefHeight="30.0" prefWidth="226.0" style="-fx-border-color: #000000;" />
+            <Button fx:id="startButton" layoutX="15.0" layoutY="358.0" mnemonicParsing="false" onAction="#startProgram" prefHeight="187.0" prefWidth="226.0" style="-fx-border-color: #000000;" text="START">
+               <font>
+                  <Font size="48.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="0.7786259396385601">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+            <TextArea fx:id="eventLog" editable="false" layoutX="261.0" layoutY="30.0" prefHeight="515.0" prefWidth="526.0" style="-fx-background-color: #000000; -fx-text-fill: #000000;" styleClass="-" />
+            <Text layoutX="261.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Event Log" textAlignment="CENTER" wrappingWidth="526.1367797851562">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <CubicCurve blendMode="ADD" controlX1="-240.1999969482422" controlX2="159.79998779296875" controlY1="-148.3999786376953" controlY2="274.0" disable="true" endX="54.19999694824219" endY="-29.20001220703125" fill="RED" layoutX="157.0" layoutY="398.0" startX="-106.59999084472656" startY="138.79998779296875" stroke="#9a1919" />
+         </children></AnchorPane>
+  </content>
+   <font>
+      <Font size="18.0" />
+   </font>
+</TitledPane>
